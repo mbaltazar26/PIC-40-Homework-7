@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    
+    <head> 
+        <meta charset="UTF-8">
+        <title> Homework 7 </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+   
+    <body>
+        
+        <span>
+            <h4>Upload a photo, bestie!</h4>
+            <form action="upload.php" method = "POST" enctype = "multipart/form-data">
+                <!-- for uploading the actual photo -->
+                <input type="file" id="filename" name="filename" required><br>  
+                <!-- for naming uploaded photo -->    
+                <label for="imageName">IMAGE NAME:</label>
+                <input type="text" id="imageName" name="imageName" required>
+                <!-- taking credit for your uploaded masterpiece -->
+                <label for="userName">YOUR NAME:</label>
+                <input type="text" id="userName" name="userName" required><br>
+                <!-- finish uploading, will redirect to upload.php -->
+                <input type="submit" id="upload">
+            </form>
+        </span>
+
+        <span> 
+            <h4>View a photo (:</h4>
+            <form action="display.php" method = "POST">
+                <!-- search for exsiting uploader -->
+                <label for="person">PERSON:</label>
+                <input type="text" id="person" name="person" required><br>
+                <!-- choose what color you want the background to be when redirected -->
+                <input type="radio" id="red" name="color" value="red" checked="checked">
+                <label for="red">RED</label> 
+                <input type="radio" id="blue" name="color" value="blue">
+                <label for="blue">BLUE</label><br>  
+                <!-- finish search, will redirect to display.php -->
+                <input type="submit" id="view">
+            </form>
+        </span>
+
+    </body>
+
+</html>
